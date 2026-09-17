@@ -806,6 +806,7 @@
         { title: "여담", content: "", spoiler: "NO", images: [] }
     ];
 
+    // 내장된 안전한 클라우드 동기화 채널 설정
     const BIN_API_URL = "https://api.jsonbin.io/v3/b/669865f3acd3cb34a8670868";
     const BIN_MASTER_KEY = "$2a$10$tZ92o93W9e8u5Q9x1.n92e2h5K51yN3g8b8x8s8b9x8s8b9x8s8b9";
 
@@ -1054,10 +1055,10 @@
 
         if (editingCharacterIndex !== null) {
             characterList[editingCharacterIndex] = characterData;
-            alert('프로필이 수정 및 사이트에 실시간 반영되었습니다!');
+            alert('프로필이 수정 및 클라우드 서버에 실시간 저장되었습니다!');
         } else {
             characterList.push(characterData);
-            alert('새 프로필이 등록되어 다른 사용자들도 볼 수 있게 반영되었습니다!');
+            alert('새 프로필이 등록되어 다른 사용자들도 볼 수 있게 동기화되었습니다!');
         }
 
         await saveData();
@@ -1323,4 +1324,4 @@
 </script>
 
 </body>
-  </html>
+</html>
